@@ -17,7 +17,6 @@ public class TasklistApplication {
         SpringApplication.run(TasklistApplication.class, args);
     }
 
-    //TODO: defining a custom bean interferes with the spring boot data auto config???  Redefine this elsewhere...
     @Bean
     CommandLineRunner runner(TaskService taskService){
         return args -> {
