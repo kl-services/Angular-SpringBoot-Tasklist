@@ -5,7 +5,11 @@ import com.klservices.tasklist.service.TaskService;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.web.server.ErrorPage;
+import org.springframework.boot.web.server.ErrorPageRegistrar;
+import org.springframework.boot.web.server.ErrorPageRegistry;
 import org.springframework.context.annotation.Bean;
+import org.springframework.http.HttpStatus;
 
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
@@ -28,5 +32,7 @@ public class TasklistApplication {
             taskService.save(new Task(6L, "run the spring boot application", LocalDate.now().plus(5, ChronoUnit.DAYS), false));
         };
     }
+
+
 
 }
